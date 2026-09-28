@@ -1,1 +1,29 @@
+1. Basic I/O using different data types
+#include <stdio.h>
 
+int main()
+{
+    int age;
+    float marks;
+    char grade;
+    double salary;
+
+    printf("Enter age: ");
+    scanf("%d", &age);
+
+    printf("Enter marks: ");
+    scanf("%f", &marks);
+
+    printf("Enter grade: ");
+    scanf(" %c", &grade);
+
+    printf("Enter salary: ");
+    scanf("%lf", &salary);
+
+    printf("\nAge = %d", age);
+    printf("\nMarks = %.2f", marks);
+    printf("\nGrade = %c", grade);
+    printf("\nSalary = %.2lf", salary);
+
+    return 0;
+}
