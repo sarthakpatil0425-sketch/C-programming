@@ -1,1 +1,43 @@
+//Integer, float and character arrays with memory addresses
 
+#include <stdio.h>
+
+int main()
+{
+    int i, n;
+    int iarr[10];
+    float farr[10];
+    char carr[10];
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    printf("\nEnter integer array elements:\n");
+    for(i = 0; i < n; i++)
+        scanf("%d", &iarr[i]);
+
+    printf("\nInteger Array:\n");
+    for(i = 0; i < n; i++)
+        printf("Value = %d, Address = %p\n",
+               iarr[i], (void*)&iarr[i]);
+
+    printf("\nEnter float array elements:\n");
+    for(i = 0; i < n; i++)
+        scanf("%f", &farr[i]);
+
+    printf("\nFloat Array:\n");
+    for(i = 0; i < n; i++)
+        printf("Value = %.2f, Address = %p\n",
+               farr[i], (void*)&farr[i]);
+
+    printf("\nEnter character array elements:\n");
+    for(i = 0; i < n; i++)
+        scanf(" %c", &carr[i]);
+
+    printf("\nCharacter Array:\n");
+    for(i = 0; i < n; i++)
+        printf("Value = %c, Address = %p\n",
+               carr[i], (void*)&carr[i]);
+
+    return 0;
+}
